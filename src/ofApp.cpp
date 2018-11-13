@@ -4,8 +4,9 @@
 void ofApp::setup()
 {
     gridSize=ofGetWindowHeight()/resolution;
-    ofSetWindowShape(ofGetWindowHeight()/9*16,ofGetWindowHeight());
-    for(int i=0;i<resolution/9*16;i++)
+    ofSetWindowShape(720,720);
+    ofSetWindowShape(ofGetWindowHeight()/aspectRate[1]*aspectRate[0],ofGetWindowHeight());
+    for(int i=0;i<resolution/aspectRate[1]*aspectRate[0];i++)
     {
         vector<double> obs;
         for(int j=0;j<resolution;j++)
@@ -17,9 +18,9 @@ void ofApp::setup()
     
     startPos.x  = 0;
     startPos.y  = (int)(resolution/2)-1;
-    goalPos.x   = (int)(resolution/9*16)-1;
+    goalPos.x   = (int)(resolution/aspectRate[1]*aspectRate[0])-1;
     goalPos.y   = (int)(resolution/2)-1;
-    ofSetFrameRate(60);
+    ofSetFrameRate(120);
 	ofBackground(255);
 
     gui.setup("panel");
@@ -91,7 +92,7 @@ void ofApp::draw(){
     ofSetColor(0);
     for(int i=0;i<resolution;i++)
     {
-        for(int j=0;j<resolution/9*16;j++)
+        for(int j=0;j<resolution/aspectRate[1]*aspectRate[0];j++)
         {
             if(obstacle[j][i]==0)
             {
@@ -120,10 +121,10 @@ void ofApp::draw(){
 void ofApp::init()
 {
      TotalCost.clear();
-        for (int i=0;i<48;i++)
+        for (int i=0;i<resolution/aspectRate[1]*aspectRate[0];i++)
         {
             vector<double>totalcost;
-            for (int j=0;j<27;j++)
+            for (int j=0;j<resolution;j++)
             {
                 totalcost.push_back(0);
             }
@@ -131,10 +132,10 @@ void ofApp::init()
         }
 
         HCost.clear();
-        for (int i=0;i<48;i++)
+        for (int i=0;i<resolution/aspectRate[1]*aspectRate[0];i++)
         {
             vector<double>hcost;
-            for (int j=0;j<27;j++)
+            for (int j=0;j<resolution;j++)
             {
                 hcost.push_back(0);
             }
@@ -405,9 +406,9 @@ void ofApp::getPath()
 void ofApp::clearObstacle()
 {
     path.clear();
-    for(int i=0;i<48;i++)
+    for(int i=0;i<resolution/aspectRate[1]*aspectRate[0];i++)
     {
-        for(int j=0;j<27;j++)
+        for(int j=0;j<resolution;j++)
         {
             obstacle[i][j]=0;
         }   
@@ -476,7 +477,7 @@ void ofApp::windowResized(int w, int h){
     //常に画面の大きさの変化に応じてgridsizeの変更
     gridSize=ofGetWindowHeight()/resolution;
     //縦横比16:9を維持
-    ofSetWindowShape(ofGetWindowHeight()/9*16,ofGetWindowHeight());
+    ofSetWindowShape(ofGetWindowHeight()/aspectRate[1]*aspectRate[0],ofGetWindowHeight());
 }
 
 

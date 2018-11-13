@@ -25,7 +25,8 @@ class ofApp : public ofBaseApp{
 		ofxLabel mode;
 
 		//画面の大きさの分割数
-		double resolution = 27;
+		double resolution = 20;
+		double aspectRate[2] = {1,1};
 		//ひとつのグリッドの大きさ
 		double gridSize;
 		
