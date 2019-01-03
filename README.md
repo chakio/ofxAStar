@@ -6,7 +6,7 @@ ofxAStar
 ![result](https://github.com/chakio/ofxAStar/blob/master/media/demo.gif)  
 ![result](https://github.com/chakio/ofxAStar/blob/master/media/demo2.gif)
 ## Description
-探索アルゴリズムのA* Saerch Algorithmを実装してみました。  
+探索アルゴリズムのA* Search Algorithmを実装してみました。  
 迷路などにおけるスタートからゴールまでの経路を探索します。
 
 ## Useage
