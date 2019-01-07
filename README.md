@@ -6,7 +6,7 @@ ofxAStar
 ![result](https://github.com/chakio/ofxAStar/blob/master/media/demo.gif)  
 ![result](https://github.com/chakio/ofxAStar/blob/master/media/demo2.gif)
 ## Description
-ロボットを移動させる際、障害物などを考慮した経路計画（ロボットのためのルートの決定）が不可欠です。 　
+ロボットを移動させる際、障害物などを考慮した経路計画（ロボットのためのルートの決定）が不可欠です。  
 そこで、経路計画手法の一つである探索アルゴリズムのA* Search Algorithmを実装しました。  
 迷路などにおけるスタートからゴールまでの経路を探索します。
 自分で好きな迷路を作成し、解くことが可能なアルゴリズムです。  
