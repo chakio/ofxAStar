@@ -16,7 +16,7 @@ ofxAStar
 * openFrameworks v0.10.0
 * visualstudio code
 
-## Useage
+## Usage
 マウスクリックやドラッグで障害物を設計した後
 キーボードのsで探索を開始します。  
 探索後や障害物を再設計する場合にはキーボードでcを入力するとクリアできます。
