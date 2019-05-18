@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "aStar.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -9,10 +10,6 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 
-		//A*用の関数
-		void init();
-		bool solve();
-		void getPath();
 		void clearObstacle();
 
 		void keyPressed(int key);
@@ -38,20 +35,12 @@ class ofApp : public ofBaseApp{
 
 		int state;//0:セット 1:A*とく
 
-		vector < vector<double> >TotalCost;
-    	vector < vector<double> >HCost;
+		vector < vector<double> >totalCost;
+    	vector < vector<double> >hCost;
 
     	//Open,Closeを用意
-    	vector < vector<double> >Open;
-    	vector<double> open;
-    	vector < vector<double> >Close;
-    	vector<double> close;
+    	vector < vector<int> >open;
+    	vector < vector<int> >close;
 
-    	//親のメモリ確保
-    	vector < vector<double> >Parent;
-    	vector<double> parent;
-
-    	//n,mの確保
-    	vector<double>n;
-    	vector<double>m;		
+		aStar AStar;
 };
