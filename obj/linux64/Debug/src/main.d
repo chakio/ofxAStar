@@ -522,7 +522,8 @@ obj/linux64/Debug/src/main.o: /home/ytpc2019a/of_ws/ofxAStar/src/main.cpp \
  /home/ytpc2019a/of_v0.10.0_linux64/addons/ofxGui/src/ofxLabel.h \
  /home/ytpc2019a/of_v0.10.0_linux64/addons/ofxGui/src/ofxColorPicker.h \
  /home/ytpc2019a/of_v0.10.0_linux64/addons/ofxGui/src/ofxPanel.h \
- /home/ytpc2019a/of_ws/ofxAStar/src/aStar.h
+ /home/ytpc2019a/of_ws/ofxAStar/src/aStar.h \
+ /home/ytpc2019a/of_ws/ofxAStar/src/gridField.h
 
 /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/ofMain.h:
 
@@ -1601,3 +1602,5 @@ obj/linux64/Debug/src/main.o: /home/ytpc2019a/of_ws/ofxAStar/src/main.cpp \
 /home/ytpc2019a/of_v0.10.0_linux64/addons/ofxGui/src/ofxPanel.h:
 
 /home/ytpc2019a/of_ws/ofxAStar/src/aStar.h:
+
+/home/ytpc2019a/of_ws/ofxAStar/src/gridField.h:

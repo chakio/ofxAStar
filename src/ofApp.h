@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "aStar.h"
+#include "gridField.h"
 
 class ofApp : public ofBaseApp{
 	public:
@@ -22,10 +23,10 @@ class ofApp : public ofBaseApp{
 		ofxLabel mode;
 
 		//画面の大きさの分割数
-		double resolution = 20;
-		double aspectRate[2] = {1,1};
+		double resolution = 100;
+		double aspectRate[2] = {2.0,1.0};
 		//ひとつのグリッドの大きさ
-		double gridSize;
+		double gridSize = 10;
 		
 		vector< vector<int> > path;
 		vector< vector<double> > obstacle;
@@ -40,7 +41,12 @@ class ofApp : public ofBaseApp{
 
     	//Open,Closeを用意
     	vector < vector<int> >open;
+		vector < vector<int> >beforeOpen;
     	vector < vector<int> >close;
+
+		
+
+		gridField costMap;
 
 		aStar AStar;
 };

@@ -3,9 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    gridSize=ofGetWindowHeight()/resolution;
-    ofSetWindowShape(720,720);
-    ofSetWindowShape(ofGetWindowHeight()/aspectRate[1]*aspectRate[0],ofGetWindowHeight());
+    ofSetWindowShape((double)gridSize * (double)resolution / aspectRate[1] * aspectRate[0],
+                     (double)gridSize * (double)resolution);
     for(int i=0;i<resolution/aspectRate[1]*aspectRate[0];i++)
     {
         vector<double> obs;
@@ -15,7 +14,8 @@ void ofApp::setup()
         }
         obstacle.push_back(obs);
     }
-    
+    costMap.setup(gridSize, resolution / aspectRate[1] * aspectRate[0], resolution);
+    costMap.setValue(obstacle);
     startPos.x  = 0;
     startPos.y  = (int)(resolution/2)-1;
     goalPos.x   = (int)(resolution/aspectRate[1]*aspectRate[0])-1;
@@ -61,6 +61,7 @@ void ofApp::update()
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    costMap.setValue(obstacle);
     //guiの描画
     gui.draw();
 
@@ -135,7 +136,7 @@ void ofApp::keyPressed(int key){
     if(key=='s')
     {
         path.clear();
-        AStar.setCostMap(obstacle);
+        AStar.setCostMap(costMap);
         AStar.init(startPos,goalPos);
         state=1;
     }
@@ -175,6 +176,7 @@ void ofApp::mousePressed(int x, int y, int button){
         int yPos=(y/gridSize);
         startPos.x=xPos;
         startPos.y=yPos;
+        cout<<startPos.x << " "<<startPos.y<<endl;
     }
     //ゴール配置モードの時
     //カーソルの位置に基づきゴールの配置

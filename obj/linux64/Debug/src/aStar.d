@@ -511,7 +511,8 @@ obj/linux64/Debug/src/aStar.o: \
  /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/video/ofGstVideoPlayer.h \
  /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/of3dUtils.h \
  /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/ofCamera.h \
- /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/ofEasyCam.h
+ /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/ofEasyCam.h \
+ /home/ytpc2019a/of_ws/ofxAStar/src/gridField.h
 
 /home/ytpc2019a/of_ws/ofxAStar/src/aStar.h:
 
@@ -1566,3 +1567,5 @@ obj/linux64/Debug/src/aStar.o: \
 /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/ofCamera.h:
 
 /home/ytpc2019a/of_v0.10.0_linux64/libs/openFrameworks/3d/ofEasyCam.h:
+
+/home/ytpc2019a/of_ws/ofxAStar/src/gridField.h:
