@@ -23,10 +23,10 @@ class ofApp : public ofBaseApp{
 		ofxLabel mode;
 
 		//画面の大きさの分割数
-		double resolution = 100;
+		double resolution = 40;
 		double aspectRate[2] = {2.0,1.0};
 		//ひとつのグリッドの大きさ
-		double gridSize = 10;
+		double gridSize = 30;
 		
 		vector< vector<int> > path;
 		vector< vector<double> > obstacle;
